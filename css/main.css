@@ -10,6 +10,21 @@
 	margin-bottom:5px;
 }
 
+.person{
+	cursor:pointer;
+	padding:2px 4px;
+}
+.person .glyphicon{
+	display:none;
+}
+
+.person:hover{
+	background:#f8f8f8;
+}
+.person:hover .glyphicon{
+	display:inline-block;
+	float:right;
+}
 
 
 
