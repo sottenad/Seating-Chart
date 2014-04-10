@@ -31,16 +31,17 @@ seatingchart.controller('seatingCtrl', function($scope, $firebase, $rootScope, p
 		$('.randomizer .glyphicon').addClass('spin');
 		var i =0;
 		var limit = 30;
+		var time = 200;
 		var interval = setInterval(function(){
 			if(i<limit){
 				randomFunc()
 				i++;
 			}
-		}, 100);
+		}, time);
 		setTimeout(function(){
 			$('.randomizer .glyphicon').removeClass('spin')
 			},
-		 limit*100);
+		 limit*time);
 	}
 	randomFunc = function(){
 		var keys = $scope.people.$getIndex();
