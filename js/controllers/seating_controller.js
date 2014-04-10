@@ -6,11 +6,10 @@ seatingchart.controller('seatingCtrl', function($scope, $firebase, $rootScope, p
 	
 	$scope.rowCapacity = [6,6,6,4,3,3];
 	
+	
 	$scope.findAmount = function(index){
 		if(index == 0){
 			return $scope.findOffset(index);
-		}else if( $scope.rowCapacity.length-1 == index){
-			return -1
 		}else{
 			return -1 * $scope.rowCapacity[index];
 		}
@@ -29,6 +28,21 @@ seatingchart.controller('seatingCtrl', function($scope, $firebase, $rootScope, p
 	};
 	
 	$scope.randomize = function(){
+		$('.randomizer .glyphicon').addClass('spin');
+		var i =0;
+		var limit = 30;
+		var interval = setInterval(function(){
+			if(i<limit){
+				randomFunc()
+				i++;
+			}
+		}, 100);
+		setTimeout(function(){
+			$('.randomizer .glyphicon').removeClass('spin')
+			},
+		 limit*100);
+	}
+	randomFunc = function(){
 		var keys = $scope.people.$getIndex();
 		angular.forEach(keys, function(key){
 			$scope.people[key].$priority = Math.random()*10000;

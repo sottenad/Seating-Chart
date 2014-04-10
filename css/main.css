@@ -3,16 +3,34 @@
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body{
+	background: #fff url(../img/banner.jpg) top center;
+	background-attachment:fixed;
+}
+
+.logo{
+	background-image:url(../img/logo-br-tag-m.png);
+	background-repeat: no-repeat;
+	height:55px;
+	width:150px;
+	display:inline-block;
+	margin:20px;
+}
+
+.content{
+	background:#fff;
+	padding:10px;
+}
 
 .row{
-	background:#fafafa;
-	padding:10px;
+	
 	margin-bottom:5px;
 }
 
 .person{
 	cursor:pointer;
 	padding:2px 4px;
+	font-size:12px
 }
 .person .glyphicon{
 	display:none;
@@ -26,7 +44,60 @@
 	float:right;
 }
 
+.seat{
+	border-right:2px solid white;
+	min-height:40px;
+	text-align: center;
+	font-size:15px;
+	background:#fafafa;
+		padding:10px;
 
+	
+}
+
+.seat small{
+	display:block;
+	font-size:10px;
+}
+
+
+
+.spin {
+  -webkit-animation: spin .4s infinite linear;
+  -moz-animation: spin .4s infinite linear;
+  -o-animation: spin .4s infinite linear;
+  animation: spin .4s infinite linear;
+     -webkit-transform-origin: 50% 50%;
+         transform-origin:50% 50%;
+         -ms-transform-origin:50% 50%; /* IE 9 */
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 
 
