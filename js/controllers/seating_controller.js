@@ -30,7 +30,7 @@ seatingchart.controller('seatingCtrl', function($scope, $firebase, $rootScope, p
 	$scope.randomize = function(){
 		$('.randomizer .glyphicon').addClass('spin');
 		var i =0;
-		var limit = 30;
+		var limit = 25;
 		var time = 200;
 		var interval = setInterval(function(){
 			if(i<limit){
